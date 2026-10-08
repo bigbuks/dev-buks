@@ -157,10 +157,10 @@ function AvailabilityStrip() {
     <div className="border border-[rgba(124,255,107,0.14)] bg-[linear-gradient(180deg,rgba(124,255,107,0.03),transparent)] px-5 py-4 space-y-2">
       <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] uppercase">
         <span className="text-dim w-[68px] shrink-0">Status</span>
-        <span className="text-green flex items-center gap-2 flex-wrap">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green shadow-glow animate-pulse shrink-0" />
-          <span>Open to freelance · contract · full-time</span>
-        </span>
+            <span className="text-green flex items-start gap-2">
+                <span className="inline-block w-1.5 h-1.5 rounded-full bg-green shadow-glow animate-pulse shrink-0 mt-[0.55em]" />
+                <span>Open to freelance · contract · full-time</span>
+            </span>
       </div>
       <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] uppercase">
         <span className="text-dim w-[68px] shrink-0">Base</span>
