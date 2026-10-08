@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-ink font-mono text-[14px] leading-relaxed antialiased;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* The fixed grid — now visible edge-to-edge */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(124, 255, 107, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124, 255, 107, 0.055) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+    z-index: 0;
+    /* mask removed — grid now fills the whole viewport */
+  }
+
+  /* Softened vignette — just enough for depth, not enough to hide the grid */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(
+      circle at 50% 40%,
+      transparent 55%,
+      rgba(0, 0, 0, 0.35) 100%
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  ::selection {
+    background: rgba(124, 255, 107, 0.25);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgba(124, 255, 107, 0.55), 0 0 40px rgba(124, 255, 107, 0.25);
+  }
+  .text-glow-sm {
+    text-shadow: 0 0 8px rgba(124, 255, 107, 0.5), 0 0 24px rgba(124, 255, 107, 0.2);
+  }
+}
+
+/* ============================================================
+   Accessibility
+   ============================================================ */
+
+/* Focus-visible — a clear green ring for keyboard navigation */
+*:focus-visible {
+  outline: 2px solid rgba(124, 255, 107, 0.85);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Kill the default outline on mouse clicks (keeps the ring for keyboard only) */
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion — calm the site down for users who ask for it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Hide purely decorative motion layers completely */
+  .animate-blink {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+}
