@@ -53,7 +53,7 @@ export function WhoAmI() {
           <Reveal delay={0.1}>
             <div className="flex flex-col justify-center h-full">
               <p className="text-ink text-[14px] md:text-[15px] leading-[1.95] mb-5">
-                I&apos;m <span className="text-green">Oluwatobiloba Bukunmi Adewumi</span>, a web developer who turns ideas
+                I am <span className="text-green">Oluwatobiloba Bukunmi Adewumi</span>, a web developer who turns ideas
                 into clean, modern, functional websites. I build from scratch for
                 businesses, brands, and individuals, with a focus on experiences
                 that look professional, work smoothly, and feel great on any
