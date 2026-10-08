@@ -63,7 +63,7 @@ export function Nav() {
           {/* Mobile hamburger */}
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden text-green text-2xl leading-none"
+            className="md:hidden text-green text-3xl leading-none"
             aria-label="Toggle menu"
           >
             {menuOpen ? "×" : "≡"}
