@@ -95,3 +95,29 @@
     opacity: 1 !important;
   }
 }
+
+/* ============================================================
+   Mobile readability — nudge up the smallest type
+   ============================================================ */
+@media (max-width: 767px) {
+  /* Bump up the tiniest labels (were 10-11px, now 12px) */
+  .text-\[10px\],
+  .text-\[10\.5px\],
+  .text-\[11px\],
+  .text-\[11\.5px\] {
+    font-size: 12px !important;
+  }
+
+  /* Bump up the small body text (was 12-13px, now 14px) */
+  .text-\[12px\],
+  .text-\[12\.5px\],
+  .text-\[13px\],
+  .text-\[13\.5px\] {
+    font-size: 14px !important;
+  }
+
+  /* Nudge the base body up slightly */
+  body {
+    font-size: 15px;
+  }
+}

@@ -10,8 +10,8 @@ import { Reveal } from "@/components/ui/Reveal";
 const FORMSPREE_ID = "xrpeplrz";
 
 const CONTACT_INFO = {
-  name: "Tobiloba Bukunmi Adewumi",
-  role: "Full-Stack Web Developer",
+  name: "Tobiloba Adewumi",
+  role: "Web Developer",
   location: "Lagos, Nigeria",
   email: "developerbuks@gmail.com",
   phone: "+234 901 705 5060",
@@ -344,12 +344,12 @@ function InfoLine({ k, v, href }: InfoLineProps) {
   const valueEl = href ? (
     <a
       href={href}
-      className="text-green hover:text-glow transition-all duration-200 break-all"
+      className="text-green hover:text-glow transition-all duration-200 break-words"
     >
       {v}
     </a>
   ) : (
-    <span className="text-green break-all">{v}</span>
+    <span className="text-green break-words">{v}</span>
   );
 
   return (
@@ -395,10 +395,10 @@ function SocialsPanel() {
             rel="noopener noreferrer"
             className="flex items-center gap-3 border border-[rgba(124,255,107,0.14)] px-4 py-3 text-ink text-[13px] font-mono transition-all duration-200 hover:border-[rgba(124,255,107,0.4)] hover:text-green hover:shadow-glow group"
           >
-            <span className="text-dim group-hover:text-green transition-colors">
+            <span className="text-dim group-hover:text-green transition-colors shrink-0">
               {s.icon}
             </span>
-            <span>{s.href.replace(/^https?:\/\//, "")}</span>
+            <span className="break-all min-w-0">{s.href.replace(/^https?:\/\//, "")}</span>
           </a>
         ))}
       </div>

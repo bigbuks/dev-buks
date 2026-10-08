@@ -48,7 +48,7 @@ export function Footer() {
                 <span className="text-ink">name</span>
                 <span className="text-dim">:</span>{" "}
                 <span className="text-green">
-                  &quot;Oluwatobiloba Bukunmi Adewumi&quot;
+                  &quot;Tobiloba Bukunmi Adewumi&quot;
                 </span>
                 <span className="text-dim">,</span>
                 {"\n"}
