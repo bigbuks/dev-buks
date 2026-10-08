@@ -59,7 +59,7 @@ export function Terminal({ className }: TerminalProps) {
         initial={{ opacity: 0, y: 6 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className="flex items-center gap-5 px-5 py-5 border-b border-[rgba(124,255,107,0.1)]"
+       className="flex items-center gap-5 px-5 py-5 min-h-[104px] border-b border-[rgba(124,255,107,0.1)]"
       >
         <Avatar src={avatarImg} alt="Bukunmi — Web Developer" size={72} />
         <div className="min-w-0">
@@ -73,7 +73,7 @@ export function Terminal({ className }: TerminalProps) {
       </motion.div>
 
       {/* Terminal body */}
-      <div className="px-4 py-5 text-[12.5px] md:text-[13px] leading-[1.85] min-h-[280px]">
+      <div className="px-4 py-5 text-[12.5px] md:text-[13px] leading-[1.85] min-h-[500px] md:min-h-[340px]">
         {SCRIPT.slice(0, visibleCount).map((line, i) => (
           <TerminalLine key={i} line={line} />
         ))}
