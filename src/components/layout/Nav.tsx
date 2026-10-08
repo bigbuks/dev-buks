@@ -37,7 +37,7 @@ export function Nav() {
             href="#top"
             className="text-green text-[18px] font-extrabold tracking-[0.15em] text-glow-sm"
           >
-            DEV.BUKS<span className="animate-blink">_</span>
+            DEV.BUKS<span>_</span>
           </a>
 
           {/* Desktop links */}

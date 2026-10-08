@@ -6,9 +6,7 @@ interface TypeLineProps {
   className?: string;
   speed?: number;
   startDelay?: number;
-  /** show the blinking caret while typing */
   caret?: boolean;
-  /** show caret forever after done */
   caretPersist?: boolean;
 }
 
@@ -23,12 +21,23 @@ export function TypeLine({
   const { displayed, done } = useTypewriter(text, { speed, startDelay });
 
   return (
-    <span className={cn("whitespace-pre", className)}>
+    <span
+      className={cn(
+        // Allow wrapping at natural word boundaries
+        "inline whitespace-pre-wrap [overflow-wrap:anywhere]",
+        className
+      )}
+    >
       {displayed}
       {caret && (!done || caretPersist) && (
-        <span className="inline-block w-[0.55ch] -mb-[0.1em] animate-blink">
-          ▍
-        </span>
+        <span
+          className="inline-block align-baseline ml-0.5 animate-blink bg-amber"
+          style={{
+            width: "0.6em",
+            height: "1em",
+            transform: "translateY(0.12em)",
+          }}
+        />
       )}
     </span>
   );

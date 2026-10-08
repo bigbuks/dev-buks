@@ -36,17 +36,28 @@ export function Hero() {
           {/* LEFT — text column */}
           <motion.div variants={container} initial="hidden" animate="show">
             <motion.div
-              variants={fadeUp}
-              className="text-[11px] md:text-[12px] tracking-[0.22em] uppercase text-dim mb-6"
-            >
-              <span className="text-amber mr-2">&gt;</span>
-              <TypeLine
-                text="SYSTEM ONLINE — FULL-STACK WEB DEVELOPER"
-                speed={28}
-                startDelay={300}
-                className="text-amber"
-              />
-            </motion.div>
+                variants={fadeUp}
+                className="text-[11px] md:text-[12px] tracking-[0.22em] uppercase text-dim mb-6 leading-[1.9]"
+                >
+                <div className="text-amber">
+                    <span className="mr-3">&gt;</span>
+                    <TypeLine
+                    text="SYSTEM ONLINE"
+                    speed={28}
+                    startDelay={300}
+                    caret={false}
+                    className="text-amber"
+                    />
+                </div>
+                <div className="text-amber pl-[1.6em] mt-0.5">
+                    <TypeLine
+                    text="FULL-STACK WEB DEVELOPER"
+                    speed={28}
+                    startDelay={1200}
+                    className="text-amber"
+                    />
+                </div>
+                </motion.div>
 
             <h1 className="text-green text-glow font-extrabold tracking-[0.02em] leading-[0.95] text-[44px] sm:text-[64px] md:text-[76px] lg:text-[88px] mb-8"
             style={{ wordSpacing: "-0.25em" }}>
