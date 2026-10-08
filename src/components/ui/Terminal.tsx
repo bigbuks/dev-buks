@@ -27,7 +27,7 @@ interface TerminalProps {
 export function Terminal({ className }: TerminalProps) {
   const { visibleCount, currentText } = useTerminalScript(SCRIPT, {
     startDelay: 700,
-    restartDelay: 2400,
+    restartDelay: 6200,
   });
 
   return (
