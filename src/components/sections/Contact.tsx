@@ -253,7 +253,7 @@ function Field({
   errors,
 }: FieldProps) {
   const fieldClass =
-    "w-full bg-[rgba(0,0,0,0.25)] border border-[rgba(124,255,107,0.14)] px-4 py-3 text-ink text-[13px] placeholder:text-dim/60 font-mono focus:outline-none focus:border-[rgba(124,255,107,0.5)] focus:shadow-glow transition-all duration-200";
+  "w-full bg-[rgba(0,0,0,0.25)] border border-[rgba(124,255,107,0.14)] px-4 py-3 text-ink text-[16px] md:text-[13px] placeholder:text-dim/60 font-mono focus:outline-none focus:border-[rgba(124,255,107,0.5)] focus:shadow-glow transition-all duration-200";
 
   return (
     <div className="flex flex-col gap-2">
