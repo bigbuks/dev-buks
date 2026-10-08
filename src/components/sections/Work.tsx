@@ -204,7 +204,7 @@ function IconLink({ href, label, icon }: IconLinkProps) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="inline-flex items-center justify-center w-8 h-8 border border-[rgba(124,255,107,0.14)] text-dim transition-all duration-200 hover:text-green hover:border-[rgba(124,255,107,0.5)] hover:shadow-glow"
+      className="inline-flex items-center justify-center w-8 h-8 border border-green/60 text-green transition-all duration-200 hover:border-green hover:bg-[rgba(124,255,107,0.08)] hover:shadow-glow"
     >
       {icon}
     </a>
