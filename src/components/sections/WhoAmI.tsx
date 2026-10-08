@@ -9,7 +9,7 @@ const EXPERIENCE = [
 ];
 
 const TRAINING = [
-  { role: "Full-Stack Web Development (MERN) ", org: "Aptech", when: "2025 — 2026", highlight: false },
+  { role: "Full-Stack Web Development (MERN)", org: "Aptech", when: "2025 — 2026", highlight: false },
   { role: "Web Development Program", org: "NIIT", when: "2025", highlight: false },
 ];
 
@@ -53,7 +53,7 @@ export function WhoAmI() {
           <Reveal delay={0.1}>
             <div className="flex flex-col justify-center h-full">
               <p className="text-ink text-[14px] md:text-[15px] leading-[1.95] mb-5">
-                I&apos;m <span className="text-green">Oluwatobiloba Bukunmi Adewumi</span> a web developer who turns ideas
+                I&apos;m <span className="text-green">Oluwatobiloba Bukunmi Adewumi</span>, a web developer who turns ideas
                 into clean, modern, functional websites. I build from scratch for
                 businesses, brands, and individuals, with a focus on experiences
                 that look professional, work smoothly, and feel great on any
@@ -67,7 +67,7 @@ export function WhoAmI() {
                   HTML, CSS, JavaScript, TypeScript, React, the MERN stack, PHP,
                   and PostgreSQL
                 </span>{" "}
-                 bringing creativity and function together so people and
+                — bringing creativity and function together so people and
                 businesses can establish a strong presence online.
               </p>
 
@@ -157,9 +157,9 @@ function AvailabilityStrip() {
     <div className="border border-[rgba(124,255,107,0.14)] bg-[linear-gradient(180deg,rgba(124,255,107,0.03),transparent)] px-5 py-4 space-y-2">
       <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] uppercase">
         <span className="text-dim w-[68px] shrink-0">Status</span>
-        <span className="text-green flex items-center gap-2">
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green shadow-glow animate-pulse" />
-          Open to freelance · contract · full-time
+        <span className="text-green flex items-center gap-2 flex-wrap">
+          <span className="inline-block w-1.5 h-1.5 rounded-full bg-green shadow-glow animate-pulse shrink-0" />
+          <span>Open to freelance · contract · full-time</span>
         </span>
       </div>
       <div className="flex items-center gap-3 text-[11px] tracking-[0.18em] uppercase">
@@ -185,25 +185,26 @@ function TimelineBlock({ title, items }: TimelineBlockProps) {
         {items.map((item) => (
           <div
             key={item.role + item.when}
-            className="flex items-center justify-between gap-4 py-4 border-b border-[rgba(124,255,107,0.14)] group"
+            className="py-4 border-b border-[rgba(124,255,107,0.14)]"
           >
-            <div className="min-w-0">
-              <div className="text-ink text-[13px] md:text-[14px] truncate">
-                <span
-                  className={
-                    item.highlight
-                      ? "text-green font-medium"
-                      : "text-ink font-medium"
-                  }
-                >
-                  {item.role}
-                </span>
-                <span className="text-dim mx-2">—</span>
-                <span className="text-dim">{item.org}</span>
-              </div>
+            {/* Row 1: role on the left, year on the right */}
+            <div className="flex items-baseline justify-between gap-4">
+              <span
+                className={
+                  "text-[13px] md:text-[14px] font-medium " +
+                  (item.highlight ? "text-green" : "text-ink")
+                }
+              >
+                {item.role}
+              </span>
+              <span className="text-[11px] tracking-[0.18em] uppercase text-amber whitespace-nowrap shrink-0">
+                {item.when}
+              </span>
             </div>
-            <div className="text-[11px] tracking-[0.18em] uppercase whitespace-nowrap text-amber shrink-0">
-              {item.when}
+
+            {/* Row 2: org on its own line */}
+            <div className="text-[12px] md:text-[13px] text-dim mt-1">
+              {item.org}
             </div>
           </div>
         ))}

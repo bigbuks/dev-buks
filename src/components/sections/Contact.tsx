@@ -10,7 +10,7 @@ import { Reveal } from "@/components/ui/Reveal";
 const FORMSPREE_ID = "xrpeplrz";
 
 const CONTACT_INFO = {
-  name: "Oluwatobiloba Bukunmi Adewumi",
+  name: "Tobiloba Bukunmi Adewumi",
   role: "Full-Stack Web Developer",
   location: "Lagos, Nigeria",
   email: "developerbuks@gmail.com",
@@ -158,7 +158,7 @@ function ContactFormInner({ onReset }: ContactFormInnerProps) {
           comment="/* Your name */"
           id="name"
           type="text"
-          placeholder="Ada Lovelace"
+          placeholder="Tobi Adewumi"
           required
           errors={state.errors}
         />
