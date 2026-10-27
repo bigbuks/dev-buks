@@ -94,6 +94,27 @@ const PROJECTS: Project[] = [
     live: "https://www.progressprestige.com",
     repo: "https://github.com/bigbuks/p_p_flooring",
   },
+    {
+    id: "PRJ-001",
+    name: "GlitzByLissah Jewelry",
+    description:
+      "Luxury e-commerce storefront featuring a bespoke custom-jewelry inquiry system, robust Paystack payment processing with webhook fail-safes, and a comprehensive admin dashboard for order, product, and lead management.",
+    tags: [
+      "React",
+      "Tailwind",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Paystack",
+      "Resend",
+      "JWT Auth",
+      "REST APIs",
+    ],
+    year: "2026",
+    live: "https://glitzbylissah.vercel.app/",
+    repo: "https://github.com/bigbuks/GlitzByLissah",
+  },
 ];
 
 export function Work() {
